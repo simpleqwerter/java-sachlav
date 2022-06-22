@@ -27,27 +27,11 @@ public class HomeworkVariables {
 
         z = --x - y * 5;
         System.out.println("z = " + z); // z= -69
+        System.out.println("x = " + x); // x= -9
 
+        y /= x + 5 % z;
+        System.out.println("y = " + (y)); // -3
 
-        System.out.println("============================");
-        // тут Java не отрабаьывает действие '/=' | рассмотрим подробнее:
-        // y /= x + 5 % z;
-        System.out.println("y = " + y); // в данный момент y=12
-
-        // первое действие : взятие остатка от деления (5 % (-69)) : ответ = 5
-        System.out.println("5 % (-69) = " + 5 % (-69) + " correct!"); // 5  correct!
-
-        // второе действие : х + 5   -> -8 + 5 -> ответ = -3
-        System.out.println("x + 5 = " + (x + 5) + " correct!"); // -3  correct!
-
-        // третье действие (/=): y = 12/(-3)= -4 !!!    тут вместо деления выполняется простое присвоение
-        System.out.println("y / (-3) = " + (y / (-3) ) + " correct!"); // -4  correct!
-
-        // разберем весь пример у /= (-8 + (5 % (-69)) =>  y=12/(-8+5) =  ответом должно быть  -4 !!! -bug found
-        System.out.println("y /= x + 5 % z = " + (y /= x + 5 % z)); // -3  bug found
-
-        System.out.println("============================");
-        System.out.println("y = " + y);
 
         z = x++ + y * 5;
         x = y - x++ * z;
